@@ -1,9 +1,8 @@
-﻿#include "2021年10月/284_窥探迭代器.h"
+﻿#include <gtest/gtest.h>
 
-int main() {
-    test_solution();
+#include "2021年10月/704_二分查找.h"
 
-    printf("%d/%d (%3.2f%%) passed\n", test_pass, test_count,
-           test_pass * 100.0 / test_count);
-    return main_ret;
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

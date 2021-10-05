@@ -1,4 +1,5 @@
-#include "../public.h"
+#include <vector>
+using std::vector;
 
 /*
  * Below is the interface for Iterator, which is already defined for you.
@@ -24,5 +25,3 @@ public:
     PeekingIterator(const vector<int>& nums) : Iterator(nums) {}
     int peek() { return Iterator(*this).next(); }
 };
-
-void test_solution() {}
