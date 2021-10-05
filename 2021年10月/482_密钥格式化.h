@@ -1,3 +1,5 @@
+#include "../public.h"
+
 class Solution {
 public:
     string licenseKeyFormatting(string s, int k) {
