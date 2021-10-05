@@ -1,6 +1,4 @@
-﻿#include "public.h"
-
-#include "2021年10月04日/482_密钥格式化.h"
+﻿#include "2021年10月/284_窥探迭代器.h"
 
 int main() {
     test_solution();
