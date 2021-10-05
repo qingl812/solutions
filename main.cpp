@@ -1,6 +1,6 @@
 ﻿#include <gtest/gtest.h>
 
-#include "2021年10月/278_第一个错误的版本.h"
+#include "2021年10月/35_搜索插入位置.h"
 
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
