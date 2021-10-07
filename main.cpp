@@ -1,6 +1,6 @@
 ﻿#include <gtest/gtest.h>
 
-#include "2021年10月/434_字符串中的单词数.h"
+#include "2021年10月/977_有序数组的平方.h"
 
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
