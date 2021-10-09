@@ -1,6 +1,6 @@
 ﻿#include <gtest/gtest.h>
 
-#include "2021年10月/977_有序数组的平方.h"
+#include "2021年10月/189_旋转数组.h"
 
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
