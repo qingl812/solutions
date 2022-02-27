@@ -1,2 +1,4 @@
-build/
+test/build/
+test/solution.cc
+.history
 .vscode
