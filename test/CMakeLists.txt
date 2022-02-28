@@ -18,6 +18,7 @@ enable_testing()
 add_executable(
   solution
   solution.cc
+  common.h
 )
 target_link_libraries(
   solution
