@@ -12,6 +12,10 @@ fi
 cd test
 cmake -S . -B build -G "MinGW Makefiles"
 cmake --build build
+if [[ $? -ne 0 ]]; then
+    printf "build failed!\n"
+    exit 0
+fi
 cd build
 ./solution.exe
 cd ../../
