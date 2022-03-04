@@ -1,8 +1,8 @@
 #!/bin/bash
 
-file=$(find ./leetcode -name $1_*.cc)
+file=$(find ./leetcode ./others -name $1_*.cc)
 echo ${file}
-cp ${file} ./test/solution.cc
+cp "${file}" ./test/solution.cc
 
 if [[ $? -ne 0 ]]; then
     printf "no such file!\n"

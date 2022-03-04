@@ -18,7 +18,6 @@ enable_testing()
 add_executable(
   solution
   solution.cc
-  common.h
 )
 target_link_libraries(
   solution
@@ -27,3 +26,5 @@ target_link_libraries(
 
 include(GoogleTest)
 gtest_discover_tests(solution)
+
+include_directories(include)

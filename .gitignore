@@ -1,6 +1,5 @@
 test/build/
 test/solution.cc
 .history
-.vscode
 out/
 .vs/

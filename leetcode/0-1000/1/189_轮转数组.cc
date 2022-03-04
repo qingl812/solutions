@@ -1,6 +1,13 @@
 #include "common.h"
 
-void rotate(vector<int> nums, int k) {}
+// https://leetcode-cn.com/problems/rotate-array/solution/xuan-zhuan-shu-zu-by-leetcode-solution-nipk/
+// 解二不会推导
+void rotate(vector<int>& nums, int k) {
+    k %= nums.size();
+    reverse(nums.begin(), nums.end());
+    reverse(nums.begin(), nums.begin() + k);
+    reverse(nums.begin() + k, nums.end());
+}
 
 TEST(solution, rotate) {
     vector<int> problem = {1, 2, 3, 4, 5, 6, 7};
