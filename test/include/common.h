@@ -10,6 +10,7 @@
 #include <queue>
 
 #include "ListNode.hpp"
+#include "TreeNode.hpp"
 
 using namespace std;
 using namespace zql;

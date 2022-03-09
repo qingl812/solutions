@@ -1,5 +1,4 @@
-#ifndef ZQL__LISTNODE_H__
-#define ZQL__LISTNODE_H__
+#pragma
 #include <vector>
 #include <iostream>
 #include <string>
@@ -15,7 +14,6 @@ struct ListNode {
 
     // 从数组转化为链表
     ListNode(const std::vector<int>& array) { this->operator=(array); }
-    ListNode(int* array) { this->operator=(array); }
     ListNode(std::initializer_list<int> list) { this->operator=(list); };
 
     ListNode& operator=(const std::vector<int>& array) {
@@ -23,17 +21,6 @@ struct ListNode {
         ListNode* p = this;
         for (auto i : array) {
             p->next = new ListNode(i);
-            p = p->next;
-        }
-        return *this;
-    }
-    ListNode& operator=(int* array) {
-        int n = sizeof(array) / sizeof(array[0]);
-
-        this->next = nullptr;
-        ListNode* p = this;
-        for (int i = 0; i < n; i++) {
-            p->next = new ListNode(array[i]);
             p = p->next;
         }
         return *this;
@@ -90,5 +77,3 @@ std::ostream& operator<<(std::ostream& os, const ListNode& head) {
     return os << out;
 }
 } // namespace zql
-
-#endif // !ZQL__LISTNODE_H__
