@@ -2,6 +2,10 @@
     "files.associations": {
         "optional": "cpp",
         "array": "cpp",
-        "unordered_map": "cpp"
-    }
+        "unordered_map": "cpp",
+        "tuple": "cpp"
+    },
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json": "file:///c%3A/qingl/project/solutions/.clang-format"
+    },
 }

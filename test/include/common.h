@@ -7,9 +7,9 @@
 #include <set>
 #include <unordered_map>
 #include <unordered_set>
-
-using namespace std;
+#include <queue>
 
 #include "ListNode.hpp"
 
+using namespace std;
 using namespace zql;

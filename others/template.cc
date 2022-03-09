@@ -3,10 +3,9 @@
 void tmpl() {}
 
 TEST(solution, tmpl) {
-    vector<int> actual, expected;
+    vector<int> question;
+    vector<int> expected;
 
-    actual = {0};
-    expected = {0};
     tmpl();
-    EXPECT_EQ(expected, actual);
+    EXPECT_EQ(expected, question);
 }
