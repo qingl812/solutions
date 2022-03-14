@@ -6,7 +6,9 @@
         "tuple": "cpp",
         "limits": "cpp",
         "cmath": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "bitset": "cpp",
+        "unordered_set": "cpp"
     },
     "yaml.schemas": {
         "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json": "file:///c%3A/qingl/project/solutions/.clang-format"
