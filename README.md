@@ -14,3 +14,4 @@
 -   [189\_轮转数组](https://leetcode-cn.com/problems/rotate-array/) 解法二
 -   [542_01 矩阵](https://leetcode-cn.com/problems/01-matrix/)
 -   [77\_组合](https://leetcode-cn.com/problems/combinations/)
+-   [432\_全 O(1) 的数据结构](https://leetcode-cn.com/problems/all-oone-data-structure/)
