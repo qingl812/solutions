@@ -3,3 +3,4 @@ test/solution.cc
 .history
 out/
 .vs/
+.vscode/
