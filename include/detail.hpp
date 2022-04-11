@@ -30,7 +30,7 @@ void init() {
  * @author qingl
  * @date 2022_04_11
  */
-int random_positive_int(size_t begin, size_t end) {
+int random_positive_int(int begin, int end) {
     assert(begin >= 0 && end >= 0);
     return rand() % (end - begin + 1) + begin;
 }
