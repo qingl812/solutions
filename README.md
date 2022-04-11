@@ -16,6 +16,6 @@
 -   [77\_组合](https://leetcode-cn.com/problems/combinations/)
 -   [432\_全 O(1) 的数据结构](https://leetcode-cn.com/problems/all-oone-data-structure/)
 
-#
+# 注意事项
 
 -   如果使用 vscode 编辑项目，建议把默认构建目录设置为 .vscode/build, 以避免和 build.sh 的构建冲突
