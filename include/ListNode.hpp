@@ -1,10 +1,14 @@
 #pragma
-#include <vector>
 #include <iostream>
 #include <string>
+#include <vector>
 
 namespace zql {
-// 带头节点的链表
+/***
+ * @brief 带头结点的链表
+ * @author qingl
+ * @date 2022_04_11
+ */
 struct ListNode {
     int val;
     ListNode* next;
@@ -41,8 +45,11 @@ struct ListNode {
         return ret;
     }
 };
-
-//判断两个 链表 或 数组 相等
+/***
+ * @brief 判断两个 链表 或 数组 相等
+ * @author qingl
+ * @date 2022_04_11
+ */
 bool operator==(const ListNode& left, const ListNode& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
@@ -52,7 +59,11 @@ bool operator==(const std::vector<int>& left, const ListNode& right) {
 bool operator==(const ListNode& left, const std::vector<int>& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
-//判断两个 链表 或 数组 不相等
+/***
+ * @brief 判断两个 链表 或 数组 不相等
+ * @author qingl
+ * @date 2022_04_11
+ */
 bool operator!=(const ListNode& left, const ListNode& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
@@ -63,7 +74,11 @@ bool operator!=(const ListNode& left, const std::vector<int>& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
 
-// gtest 打印链表
+/***
+ * @brief gtest 打印链表
+ * @author qingl
+ * @date 2022_04_11
+ */
 std::ostream& operator<<(std::ostream& os, const ListNode& head) {
     auto p = head.next;
     std::string out = "{ ";

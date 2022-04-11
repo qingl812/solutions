@@ -1,13 +1,17 @@
 #pragma
-#include <vector>
-#include <queue>
-#include <limits.h>
-#include <iostream>
 #include <cmath>
+#include <iostream>
+#include <limits.h>
+#include <queue>
+#include <vector>
 
 namespace zql {
-// 带头节点的二叉树
-// 头节点的 left 节点 为二叉树的 root
+/***
+ * @brief 带头节点的二叉树
+ * @details 头节点的 left 节点 为二叉树的 root
+ * @author qingl
+ * @date 2022_04_11
+ */
 struct TreeNode {
     int val;
     TreeNode* left;
@@ -16,7 +20,6 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode* left, TreeNode* right)
         : val(x), left(left), right(right) {}
-
 
     // 从一个表示完全二叉树的数组 转化为 二叉树
     // 如果某个节点为空 应赋值为 INT_MIN
@@ -93,7 +96,11 @@ public:
     }
 };
 
-//判断两个 二叉树 或 数组 相等
+/***
+ * @brief 判断两个 二叉树 或 数组 相等
+ * @author qingl
+ * @date 2022_04_11
+ */
 bool operator==(const TreeNode& left, const TreeNode& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
@@ -103,7 +110,11 @@ bool operator==(const std::vector<int>& left, const TreeNode& right) {
 bool operator==(const TreeNode& left, const std::vector<int>& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
-//判断两个 二叉树 或 数组 不相等
+/***
+ * @brief 判断两个 二叉树 或 数组 不相等
+ * @author qingl
+ * @date 2022_04_11
+ */
 bool operator!=(const TreeNode& left, const TreeNode& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
@@ -114,7 +125,11 @@ bool operator!=(const TreeNode& left, const std::vector<int>& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
 
-// gtest 打印链表
+/***
+ * @brief gtest 打印链表等
+ * @author qingl
+ * @date 2022_04_11
+ */
 std::ostream& operator<<(std::ostream& os, const TreeNode& tree) {
     auto nums = std::vector<int>(tree);
     std::string out = "{ ";
