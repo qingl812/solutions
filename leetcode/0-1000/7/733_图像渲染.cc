@@ -67,11 +67,9 @@ vector<vector<int>> floodFill_dfs(vector<vector<int>>& image, int sr, int sc,
     return answer;
 }
 
-typedef vector<vector<int>> sol_fun(vector<vector<int>>&, int, int, int);
+TEST(solution, floodFill) {
+    auto solution_func = floodFill_bfs;
 
-class SolutionTest : public ::testing::TestWithParam<sol_fun*> {};
-
-TEST_P(SolutionTest, floodFill) {
     vector<vector<int>> question;
     vector<vector<int>> expected;
 
@@ -85,7 +83,7 @@ TEST_P(SolutionTest, floodFill) {
     expected.push_back({2, 2, 2});
     expected.push_back({2, 2, 0});
     expected.push_back({2, 0, 1});
-    EXPECT_EQ(expected, GetParam()(question, 1, 1, 2));
+    EXPECT_EQ(expected, solution_func(question, 1, 1, 2));
 
     // 2
     question.clear();
@@ -95,7 +93,7 @@ TEST_P(SolutionTest, floodFill) {
 
     expected.push_back({2, 2, 2});
     expected.push_back({2, 2, 2});
-    EXPECT_EQ(expected, GetParam()(question, 0, 0, 2));
+    EXPECT_EQ(expected, solution_func(question, 0, 0, 2));
 
     // 3
     question.clear();
@@ -104,7 +102,7 @@ TEST_P(SolutionTest, floodFill) {
     question.push_back({0, 1, 1});
     expected.push_back({0, 0, 0});
     expected.push_back({0, 1, 1});
-    EXPECT_EQ(expected, GetParam()(question, 1, 1, 1));
+    EXPECT_EQ(expected, solution_func(question, 1, 1, 1));
 
     // 4
     question.clear();
@@ -113,8 +111,5 @@ TEST_P(SolutionTest, floodFill) {
     question.push_back({0, 1, 0});
     expected.push_back({2, 2, 2});
     expected.push_back({2, 1, 2});
-    EXPECT_EQ(expected, GetParam()(question, 0, 0, 2));
+    EXPECT_EQ(expected, solution_func(question, 0, 0, 2));
 }
-
-INSTANTIATE_TEST_SUITE_P(solution, SolutionTest,
-                         ::testing::Values(floodFill_bfs, floodFill_dfs));

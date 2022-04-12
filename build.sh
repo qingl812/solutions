@@ -1,14 +1,18 @@
 #!/bin/bash
-source scripts/functions.sh
 
 # 参数为 [all|number]
+
+# 如果参数个数不等于1
 if [ $# -ne 1 ]; then
-    exit_with_error "Usage: $0 [all|number]"
+    echo "Usage: $0 [all|clean|number]"
+    exit 1
 fi
 
-# 获取参数 all
-if [ "$1" == "all" ]; then
-    bash scripts/build.sh -1 leetcode
-else
-    bash scripts/build.sh $1 leetcode
+# 如果参数是 clean
+if [ $1 == "clean" ]; then
+    echo "clean"
+    rm -rf build
+    exit 0
 fi
+
+python scripts/build.py $1 test/src leetcode template
