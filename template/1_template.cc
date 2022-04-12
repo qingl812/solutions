@@ -1,6 +1,6 @@
 #include "common.h"
 
-void tmpl() {}
+void tmpl1() {}
 void tmpl2() {}
 
 typedef void sol_fun();
@@ -16,4 +16,4 @@ TEST_P(SolutionTest, floodFill) {
 }
 
 INSTANTIATE_TEST_SUITE_P(solution, SolutionTest,
-                         ::testing::Values(tmpl, tmpl2));
+                         ::testing::Values(tmpl1, tmpl2));

@@ -1,5 +1,5 @@
 build/
-test/solution.cc
+test/src
 .history
 out/
 .vs/

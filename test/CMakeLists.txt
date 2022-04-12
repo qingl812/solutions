@@ -19,9 +19,11 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
+# 此目录下所有文件
+aux_source_directory(./src ALL_SOURCE)
 add_executable(
   solution-test
-  solution.cc
+  ${ALL_SOURCE}
 )
 target_link_libraries(
   solution-test

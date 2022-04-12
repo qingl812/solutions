@@ -1,18 +1,14 @@
 #!/bin/bash
+source scripts/functions.sh
 
-file=$(find ./leetcode -name $1_*.cc)
-echo ${file}
-cp "${file}" ./test/solution.cc
-
-if [[ $? -ne 0 ]]; then
-    printf "no such file!\n"
-    exit 0
+# 参数为 [all|number]
+if [ $# -ne 1 ]; then
+    exit_with_error "Usage: $0 [all|number]"
 fi
 
-cmake -S . -B build
-cmake --build build
-if [[ $? -ne 0 ]]; then
-    printf "build failed!\n"
-    exit 0
+# 获取参数 all
+if [ "$1" == "all" ]; then
+    bash scripts/build.sh -1 leetcode
+else
+    bash scripts/build.sh $1 leetcode
 fi
-./build/test/DeBug/solution-test.exe
