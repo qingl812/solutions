@@ -5,7 +5,7 @@ const int dy[4] = {0, 1, -1, 0};
 
 // bfs
 vector<vector<int>> floodFill_bfs(vector<vector<int>>& image, int sr, int sc,
-                                int newColor) {
+                                  int newColor) {
     // init
     int oldColor = image[sr][sc];
     if (newColor == oldColor)
@@ -13,7 +13,7 @@ vector<vector<int>> floodFill_bfs(vector<vector<int>>& image, int sr, int sc,
 
     auto& answer = image;
     queue<tuple<int, int>> nodes;
-    int height = image.size(), width = image[0].size();
+    auto height = image.size(), width = image[0].size();
 
     answer[sr][sc] = newColor;
     nodes.emplace(sr, sc);
@@ -37,7 +37,7 @@ vector<vector<int>> floodFill_bfs(vector<vector<int>>& image, int sr, int sc,
 
 // dfs
 vector<vector<int>> floodFill_dfs(vector<vector<int>>& image, int sr, int sc,
-                                int newColor) {
+                                  int newColor) {
     // init
     int oldColor = image[sr][sc];
     if (newColor == oldColor)
@@ -45,7 +45,7 @@ vector<vector<int>> floodFill_dfs(vector<vector<int>>& image, int sr, int sc,
 
     auto& answer = image;
     stack<tuple<int, int>> nodes;
-    int height = image.size(), width = image[0].size();
+    auto height = image.size(), width = image[0].size();
 
     answer[sr][sc] = newColor;
     nodes.emplace(sr, sc);

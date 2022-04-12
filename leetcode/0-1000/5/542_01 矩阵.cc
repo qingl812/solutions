@@ -5,8 +5,8 @@ int dy[] = {1, 0, 0, -1};
 
 vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
     // init
-    int width = mat[0].size();
-    int height = mat.size();
+    auto width = mat[0].size();
+    auto height = mat.size();
     queue<tuple<int, int>> que;
     vector<vector<int>> ans(height, vector<int>(width, -1));
     for (int x = 0; x < width; x++) {

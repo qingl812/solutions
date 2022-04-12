@@ -1,7 +1,7 @@
 #include "common.h"
 
 vector<int> generate_next_line(const vector<int>& pre_line) {
-    int n = pre_line.size();
+    auto n = pre_line.size();
     auto ans = vector<int>(n + 1);
     ans[0] = 1;
     ans[n] = 1;

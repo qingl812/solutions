@@ -11,7 +11,7 @@ int mySqrt(int x) {
         } else
             left = mid + 1;
     }
-    return left * left <= x ? left : left - 1;
+    return static_cast<int>(left * left <= x ? left : left - 1);
 }
 
 TEST(solution, mySqrt) {

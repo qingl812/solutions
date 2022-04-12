@@ -3,7 +3,7 @@
 int firstUniqChar(const string& s) {
     unordered_map<char, bool> hash_map;
 
-    for (int i = s.size() - 1; i >= 0; i--) {
+    for (int i = static_cast<int>(s.size()) - 1; i >= 0; i--) {
         auto pos = hash_map.find(s[i]);
         if (pos == hash_map.end()) {
             hash_map.emplace(s[i], true);

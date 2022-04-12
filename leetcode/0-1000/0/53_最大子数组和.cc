@@ -24,12 +24,12 @@ Status pushUp(Status l, Status r) {
     int lSum = max(l.lSum, l.iSum + r.lSum);
     int rSum = max(r.rSum, r.iSum + l.rSum);
     int mSum = max(max(l.mSum, r.mSum), l.rSum + r.lSum);
-    return (Status){lSum, rSum, mSum, iSum};
+    return {lSum, rSum, mSum, iSum};
 };
 
 Status get(vector<int>& a, int l, int r) {
     if (l == r) {
-        return (Status){a[l], a[l], a[l], a[l]};
+        return {a[l], a[l], a[l], a[l]};
     }
     int m = (l + r) >> 1;
     Status lSub = get(a, l, m);
@@ -38,7 +38,7 @@ Status get(vector<int>& a, int l, int r) {
 }
 
 int maxSubArray2(vector<int>& nums) {
-    return get(nums, 0, nums.size() - 1).mSum;
+    return get(nums, 0, static_cast<int>(nums.size()) - 1).mSum;
 }
 
 TEST(solution, maxSubArray) {

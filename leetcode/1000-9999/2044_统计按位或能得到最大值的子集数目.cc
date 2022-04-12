@@ -1,7 +1,8 @@
 #include "common.h"
 
 int countMaxOrSubsets(vector<int>& nums) {
-    int n = nums.size(), maxValue = 0, cnt = 0, stateNumber = 1 << n;
+    auto n = nums.size();
+    int maxValue = 0, cnt = 0, stateNumber = 1 << n;
     for (int i = 0; i < stateNumber; i++) {
         int cur = 0;
         for (int j = 0; j < n; j++) {

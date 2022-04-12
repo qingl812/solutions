@@ -5,7 +5,8 @@ const int dy[4] = {0, 1, -1, 0};
 
 // 广度优先搜索每个节点，把已访问的节点置为 0
 int maxAreaOfIsland(vector<vector<int>>& grid) {
-    int width = grid[0].size(), height = grid.size();
+    int width = static_cast<int>(grid[0].size()),
+        height = static_cast<int>(grid.size());
     queue<tuple<int, int>> que;
     int ans = 0;
 

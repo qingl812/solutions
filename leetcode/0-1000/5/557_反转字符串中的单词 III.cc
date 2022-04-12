@@ -2,7 +2,7 @@
 
 string reverseWords(string s) {
     string ret;
-    int length = s.length();
+    auto length = s.length();
     int i = 0;
     while (i < length) {
         int start = i;

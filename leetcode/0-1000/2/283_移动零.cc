@@ -1,7 +1,7 @@
 #include "common.h"
 
 void moveZeroes(vector<int>& nums) {
-    int pos = 0, n = nums.size();
+    size_t n = nums.size(), pos = 0;
     for (auto& i : nums) {
         if (i) {
             nums[pos++] = i;

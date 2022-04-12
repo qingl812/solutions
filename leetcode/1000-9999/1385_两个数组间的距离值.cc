@@ -2,8 +2,8 @@
 
 int findTheDistanceValue(vector<int>& arr1, vector<int>& arr2, int d) {
     sort(arr2.begin(), arr2.end());
-    int arr2_n = arr2.size();
-    int ans = arr1.size();
+    int arr2_n = static_cast<int>(arr2.size());
+    int ans = static_cast<int>(arr1.size());
     for (auto i : arr1) {
         // arr2 >= i-d && arr2 <= i+d
         int left = 0;

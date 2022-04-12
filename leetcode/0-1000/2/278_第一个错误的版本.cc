@@ -2,12 +2,14 @@
 
 int badVersion = 0;
 
-bool isBadVersion(int version) { return version >= badVersion; }
+bool isBadVersion(int version) {
+    return version >= badVersion;
+}
 
 int firstBadVersion(int n) {
-    long long begin = 1, end = n;
+    int begin = 1, end = n;
     while (begin <= end) {
-        long long mid = (begin + end) / 2;
+        int mid = begin + (end - begin) / 2;
         if (isBadVersion(mid)) {
             end = mid - 1;
             if (!isBadVersion(end))

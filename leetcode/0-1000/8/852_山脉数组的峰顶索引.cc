@@ -1,7 +1,7 @@
 #include "common.h"
 
 int peakIndexInMountainArray(vector<int>& arr) {
-    int left = 0, right = arr.size() - 1;
+    int left = 0, right = static_cast<int>(arr.size() - 1);
     int ans = 0;
     while (left <= right) {
         int mid = left + (right - left) / 2;

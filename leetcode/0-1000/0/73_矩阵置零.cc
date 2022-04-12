@@ -1,7 +1,7 @@
 #include "common.h"
 
 void setZeroes(vector<vector<int>>& matrix) {
-    int m = matrix.size(), n = matrix[0].size();
+    auto m = matrix.size(), n = matrix[0].size();
     vector<bool> zero_row(m, false), zero_col(n, false);
 
     for (int i = 0; i < m; i++) {

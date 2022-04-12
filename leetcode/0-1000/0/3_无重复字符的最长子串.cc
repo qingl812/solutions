@@ -12,7 +12,7 @@ int lengthOfLongestSubstring(string s) {
         chars.insert(s[right++]);
         max = std::max(max, right - left);
     }
-    return max;
+    return static_cast<int>(max);
 }
 
 TEST(solution, lengthOfLongestSubstring) {

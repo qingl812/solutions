@@ -4,7 +4,7 @@ int dx[4] = {0, 1, -1, 0};
 int dy[4] = {1, 0, 0, -1};
 
 int orangesRotting(vector<vector<int>>& grid) {
-    int width = grid.size(), height = grid[0].size();
+    auto width = grid.size(), height = grid[0].size();
     queue<tuple<int, int>> que;
     que.emplace(-1, -1);
     int ans = 0;

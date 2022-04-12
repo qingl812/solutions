@@ -3,7 +3,7 @@
 vector<int> sortedSquares(vector<int> nums) {
     for (auto& i : nums)
         i = i * i;
-    int n = nums.size();
+    auto n = nums.size();
     vector<int> result;
     if (n == 1) {
         result.push_back(nums[0]);

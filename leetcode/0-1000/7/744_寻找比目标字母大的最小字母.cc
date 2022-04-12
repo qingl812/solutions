@@ -3,7 +3,7 @@
 char nextGreatestLetter(vector<char>& letters, char target) {
     if (target >= letters.back())
         return letters[0];
-    int left = 0, right = letters.size() - 1;
+    int left = 0, right = static_cast<int>(letters.size() - 1);
     while (left < right) {
         int mid = left + (right - left) / 2;
         if (letters[mid] <= target)

@@ -1,7 +1,7 @@
 #include "common.h"
 
 int search(vector<int> nums, int target) {
-    int begin = 0, end = nums.size() - 1;
+    int begin = 0, end = static_cast<int>(nums.size() - 1);
     while (begin <= end) {
         int mid = (begin + end) / 2;
         if (nums[mid] > target) {
