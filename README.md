@@ -11,6 +11,7 @@
 ## 注意事项
 
 - 使用 vscode 时，建议把默认构建目录设置为 .vscode/build, 以避免和 build.sh 的构建冲突
+- 使用 vscode 时，为了避免 leetcode/ 中文件报错，请禁用 cmake 扩展，但这样就无法调试了
 - 使用 vscode 时，如果提示包含文件错误，请修改 `c_cpp_properties.json` 添加 inlcude 文件
 
 ```conf

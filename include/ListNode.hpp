@@ -50,13 +50,13 @@ struct ListNode {
  * @author qingl
  * @date 2022_04_11
  */
-bool operator==(const ListNode& left, const ListNode& right) {
+inline bool operator==(const ListNode& left, const ListNode& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
-bool operator==(const std::vector<int>& left, const ListNode& right) {
+inline bool operator==(const std::vector<int>& left, const ListNode& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
-bool operator==(const ListNode& left, const std::vector<int>& right) {
+inline bool operator==(const ListNode& left, const std::vector<int>& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
 /***
@@ -64,13 +64,13 @@ bool operator==(const ListNode& left, const std::vector<int>& right) {
  * @author qingl
  * @date 2022_04_11
  */
-bool operator!=(const ListNode& left, const ListNode& right) {
+inline bool operator!=(const ListNode& left, const ListNode& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
-bool operator!=(const std::vector<int>& left, const ListNode& right) {
+inline bool operator!=(const std::vector<int>& left, const ListNode& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
-bool operator!=(const ListNode& left, const std::vector<int>& right) {
+inline bool operator!=(const ListNode& left, const std::vector<int>& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
 
@@ -79,7 +79,7 @@ bool operator!=(const ListNode& left, const std::vector<int>& right) {
  * @author qingl
  * @date 2022_04_11
  */
-std::ostream& operator<<(std::ostream& os, const ListNode& head) {
+inline std::ostream& operator<<(std::ostream& os, const ListNode& head) {
     auto p = head.next;
     std::string out = "{ ";
     while (p != nullptr) {

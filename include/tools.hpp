@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "ListNode.hpp"
+#include "TreeNode.hpp"
+
 namespace zql {
 /***
  * @brief tools

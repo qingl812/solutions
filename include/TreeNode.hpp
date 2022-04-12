@@ -101,13 +101,13 @@ public:
  * @author qingl
  * @date 2022_04_11
  */
-bool operator==(const TreeNode& left, const TreeNode& right) {
+inline bool operator==(const TreeNode& left, const TreeNode& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
-bool operator==(const std::vector<int>& left, const TreeNode& right) {
+inline bool operator==(const std::vector<int>& left, const TreeNode& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
-bool operator==(const TreeNode& left, const std::vector<int>& right) {
+inline bool operator==(const TreeNode& left, const std::vector<int>& right) {
     return (std::vector<int>)left == (std::vector<int>)right;
 }
 /***
@@ -115,13 +115,13 @@ bool operator==(const TreeNode& left, const std::vector<int>& right) {
  * @author qingl
  * @date 2022_04_11
  */
-bool operator!=(const TreeNode& left, const TreeNode& right) {
+inline bool operator!=(const TreeNode& left, const TreeNode& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
-bool operator!=(const std::vector<int>& left, const TreeNode& right) {
+inline bool operator!=(const std::vector<int>& left, const TreeNode& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
-bool operator!=(const TreeNode& left, const std::vector<int>& right) {
+inline bool operator!=(const TreeNode& left, const std::vector<int>& right) {
     return (std::vector<int>)left != (std::vector<int>)right;
 }
 
@@ -130,7 +130,7 @@ bool operator!=(const TreeNode& left, const std::vector<int>& right) {
  * @author qingl
  * @date 2022_04_11
  */
-std::ostream& operator<<(std::ostream& os, const TreeNode& tree) {
+inline std::ostream& operator<<(std::ostream& os, const TreeNode& tree) {
     auto nums = std::vector<int>(tree);
     std::string out = "{ ";
     for (int i = 0; i < nums.size(); i++) {
