@@ -17,9 +17,8 @@
 #include <unordered_set>
 #include <vector>
 
-#include "ListNode.hpp"
-#include "TreeNode.hpp"
+using namespace std;
+
 #include "tools.hpp"
 
-using namespace std;
 using namespace zql;
