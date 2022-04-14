@@ -5,7 +5,7 @@
 - `bash build.sh n` ，编译运行形如 `n_*.cc` 的文件
 - `bash build.sh all` ，编译运行所有 `*.cc` 文件
 - 调试请在 test 文件夹中加入断点
-- 从 `template/0_template.cc` 文件获取模板文件
+- 从 `sample/0_sample.cc` 文件获取模板文件
 - `include` 中 `common.h` 包含了大部分常用头文件，其他文件是一些自定义的类型
 
 ## 注意事项
