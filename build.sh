@@ -15,4 +15,4 @@ if [ $1 == "clean" ]; then
     exit 0
 fi
 
-python scripts/build.py $1 test/src leetcode template
+python scripts/build.py $1 test/src leetcode sample
