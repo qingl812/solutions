@@ -78,10 +78,10 @@ for root, dirs, files in os.walk(folder_source):
             else:
                 pos = file_content.find("\"", pos + 1)
                 pos = file_content.find("\"", pos + 1) + 1
-            file_content = "// " + source_path + "\n" + \
-                file_content[:pos] + \
-                "\n\nnamespace {" + \
-                file_content[pos:] + \
+            file_content = file_content[:pos] + \
+                "// " + source_path + \
+                "\nnamespace { " + \
+                file_content[pos + 2:] + \
                 "\n} // namespace\n"
 
             # 判断 folder_target 下没有 target_path 文件
