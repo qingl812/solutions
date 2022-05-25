@@ -11,16 +11,21 @@
 ## 注意事项
 
 - 使用 vscode 时，建议把默认构建目录设置为 .vscode/build, 以避免和 build.sh 的构建冲突
-- 使用 vscode 时，为了避免 leetcode/ 中文件报错，请禁用 cmake 扩展，但这样就无法调试了
-- 使用 vscode 时，如果提示包含文件错误，请修改 `c_cpp_properties.json` 添加 inlcude 文件
+- 使用 vscode 时，如果提示包含文件错误，请修改 `c_cpp_properties.json` 添加 inlcude 文件，如果还是头文件错误请删除 `intelliSenseMode` 配置项
 
-```conf
-"includePath": [
-"${default}",
-".vscode/build/_deps/googletest-src/googletest/include",
-"include"
-],
-```
+  ```conf
+  "includePath": [
+  "${default}",
+  ".vscode/build/_deps/googletest-src/googletest/include",
+  "include"
+  # del
+  # "intelliSenseMode": "windows-msvc-x64"
+  ],
+  ```
+
+- 中文乱码问题，使用 `chcp` 检查代码页是否为 `65001`，如果不是请修改，(注：`chcp 65001` 命令是无法解决此问题的) [参考链接](https://stackoverflow.com/questions/57131654/using-utf-8-encoding-chcp-65001-in-command-prompt-windows-powershell-window)
+  > `code $PROFILE` 并把下列代码添加到末尾 `$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding`
+
 
 ## 未解决的问题
 
